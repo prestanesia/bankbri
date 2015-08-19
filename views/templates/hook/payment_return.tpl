@@ -28,9 +28,9 @@
 		<br /><br />
 		{l s='Please send us a bank wire with' mod='bankbri'}
 		<br /><br />- {l s='Amount' mod='bankbri'} <span class="price"><strong>{$total_to_pay}</strong></span>
-		<br /><br />- {l s='Name of account owner' mod='bankbri'}  <strong>{if $bankbri}{$bankbri}{else}___________{/if}</strong>
-		<br /><br />- {l s='Include these details' mod='bankbri'}  <strong>{if $bankbri}{$bankbri}{else}___________{/if}</strong>
-		<br /><br />- {l s='Bank name' mod='bankbri'}  <strong>{if $bankbri}{$bankbri}{else}___________{/if}</strong>
+		<br /><br />- {l s='Name of account owner' mod='bankbri'}  <strong>{if $bankbriOwner}{$bankbriOwner}{else}___________{/if}</strong>
+		<br /><br />- {l s='Include these details' mod='bankbri'}  <strong>{if $bankbriDetails}{$bankbriDetails}{else}___________{/if}</strong>
+		<br /><br />- {l s='Bank name' mod='bankbri'}  <strong>{if $bankbriAddress}{$bankbriAddress}{else}___________{/if}</strong>
 		{if !isset($reference)}
 			<br /><br />- {l s='Do not forget to insert your order number #%d in the subject of your bank wire.' sprintf=$id_order mod='bankbri'}
 		{else}
