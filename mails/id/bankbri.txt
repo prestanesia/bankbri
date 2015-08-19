@@ -1,0 +1,31 @@
+
+[{shop_url}] 
+
+Halo {firstname} {lastname},
+
+Terima kasih telah berbelanja di {shop_name}! 
+
+Pembelian dengan no referensi {order_name} berhasil diproses
+dan AKAN DIKIRIMKAN SETELAH PE,BAYARAN KAMI TERIMA. 
+
+Anda memilih untuk membayar menggunakan Bank BRI. 
+
+Berikut adalah informasi rekening dan jumlah pembayaran:
+
+JUMLAH: {total_paid}
+
+BANK: {bankbri_owner}
+
+INFORMASI REKENING: {bankbri_details}
+
+ALAMAT BANK: {bankbri_address} 
+
+Anda dapat melihat riwayat pembelian dan mengunduh invoice dari halaman
+"Riwayat pembelian" [{history_url}] dihalaman akun pelanggan yang dapat diakses melalui menu "Akun saya"
+[{my_account_url}] di website kami. 
+
+Jika Anda menggunakan guest account, Anda dapat memantau pembelian ini dari menu
+"Guest Tracking" [{guest_tracking_url}] di website kami. 
+
+{shop_name} [{shop_url}] dibuat menggunakan
+PrestaShop(tm) [http://www.prestashop.com/] 
