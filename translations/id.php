@@ -35,7 +35,7 @@ $_MODULE['<{bankbri}prestashop>payment_execution_5dd5bdf8971b88852d0404084e01f7e
 $_MODULE['<{bankbri}prestashop>payment_execution_edd87c9059d88fea45c0bd6384ce92b9'] = 'Konfirmasi pembelian Anda dengan klik pada tombol \"Konfirmasi pembelian\".';
 $_MODULE['<{bankbri}prestashop>payment_execution_46b9e3665f187c739c55983f757ccda0'] = 'Konfirmasi pembelian';
 $_MODULE['<{bankbri}prestashop>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = 'Cara pembayaran lainnya';
-$_MODULE['<{bankbri}prestashop>infos_ded057310c7e43d110dd1894c90b0817'] = 'Modul untuk menerima penbayaran melalui Bank BRI.';
+$_MODULE['<{bankbri}prestashop>infos_ded057310c7e43d110dd1894c90b0817'] = 'Modul untuk menerima pembayaranran melalui Bank BRI.';
 $_MODULE['<{bankbri}prestashop>infos_adefa59a721baa5d1e795e679da8efcb'] = 'Jika pelanggan memilih membayar menggunakan Bank BRI, status pembelian akan berubah menjadi \'Menunggu pembayaran via Bank BRI\'';
 $_MODULE['<{bankbri}prestashop>infos_0f94ae3183be029b8f6400f2c37cb732'] = 'Dan jika pembayaran telah diterima, konfirmasi pembayaran harus dilakukan secara manual.';
 $_MODULE['<{bankbri}prestashop>payment_087e308611cb84ba18b2a3e05c76a0a6'] = 'Bayar melalui Bank BRI';
