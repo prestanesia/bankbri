@@ -42,7 +42,7 @@ class BankBRI extends PaymentModule
     {
         $this->name = 'bankbri';
         $this->tab = 'payments_gateways';
-        $this->version = '1.1.0';
+        $this->version = '1.1.1';
         $this->author = 'Prestanesia';
         $this->controllers = array('payment', 'validation');
         $this->is_eu_compatible = 1;
@@ -218,7 +218,7 @@ class BankBRI extends PaymentModule
 
         $payment_options = array(
             'cta_text' => $this->l('Pay by Bank BRI'),
-            'logo' => Media::getMediaPath(dirname(__FILE__).'/bankwire.jpg'),
+            'logo' => Media::getMediaPath(_PS_MODULE_DIR_.$this->name.'/bankwire.jpg'),
             'action' => $this->context->link->getModuleLink($this->name, 'validation', array(), true)
         );
 
