@@ -24,24 +24,22 @@
 *}
 
 {if $status == 'ok'}
-<p>{l s='Your order on %s is complete.' sprintf=$shop_name mod='bankbri'}
-		<br /><br />
-		{l s='Please send us a bank wire with' mod='bankbri'}
-		<br /><br />- {l s='Amount' mod='bankbri'} <span class="price"><strong>{$total_to_pay}</strong></span>
-		<br /><br />- {l s='Name of account owner' mod='bankbri'}  <strong>{if $bankbriOwner}{$bankbriOwner}{else}___________{/if}</strong>
-		<br /><br />- {l s='Include these details' mod='bankbri'}  <strong>{if $bankbriDetails}{$bankbriDetails}{else}___________{/if}</strong>
-		<br /><br />- {l s='Bank name' mod='bankbri'}  <strong>{if $bankbriAddress}{$bankbriAddress}{else}___________{/if}</strong>
-		{if !isset($reference)}
-			<br /><br />- {l s='Do not forget to insert your order number #%d in the subject of your bank wire.' sprintf=$id_order mod='bankbri'}
-		{else}
-			<br /><br />- {l s='Do not forget to insert your order reference %s in the subject of your bank wire.' sprintf=$reference mod='bankbri'}
-		{/if}		<br /><br />{l s='An email has been sent with this information.' mod='bankbri'}
-		<br /><br /> <strong>{l s='Your order will be sent as soon as we receive payment.' mod='bankbri'}</strong>
-		<br /><br />{l s='If you have questions, comments or concerns, please contact our' mod='bankbri'} <a href="{$link->getPageLink('contact', true)|escape:'html'}">{l s='expert customer support team' mod='bankbri'}</a>.
-	</p>
+    <p>
+      {l s='Your order on %s is complete.' sprintf=[$shop_name] mod='bankbri'}<br/>
+      {l s='Please send us payment via Bank BRI with:' mod='bankbri'}
+    </p>
+    {include file='module:bankbri/views/templates/hook/_partials/payment_infos.tpl'}
+
+    <p>
+      {l s='Please specify your order reference %s in the bankwire description.' sprintf=[$reference] mod='bankbri'}<br/>
+      {l s='We\'ve also sent you this information by e-mail.' mod='bankbri'}
+    </p>
+    <strong>{l s='Your order will be sent as soon as we receive payment.' mod='bankbri'}</strong>
+    <p>
+      {l s='If you have questions, comments or concerns, please contact our [1]expert customer support team[/1].' mod='bankbri' tags=["<a href='{$contact_url}'>"]}
+    </p>
 {else}
-	<p class="warning">
-		{l s='We noticed a problem with your order. If you think this is an error, feel free to contact our' mod='bankbri'} 
-		<a href="{$link->getPageLink('contact', true)|escape:'html'}">{l s='expert customer support team' mod='bankbri'}</a>.
-	</p>
+    <p class="warning">
+      {l s='We noticed a problem with your order. If you think this is an error, feel free to contact our [1]expert customer support team[/1].' mod='bankbri' tags=["<a href='{$contact_url}'>"]}
+    </p>
 {/if}

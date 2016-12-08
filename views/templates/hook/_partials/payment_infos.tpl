@@ -23,9 +23,14 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<p class="payment_module">
-	<a href="{$link->getModuleLink('bankbri', 'payment')|escape:'html'}" title="{l s='Pay by Bank BRI' d='Modules.BankBRI.Shop'}">
-		<img src="{$this_path_bw}logo.png" alt="{l s='Pay by Bank BRI' d='Modules.BankBRI.Shop'}"/>
-		{l s='Pay by Bank BRI' d='Modules.BankBRI.Shop'}&nbsp;<span>{l s='(order processing will be longer)' d='Modules.BankBRI.Shop'}</span>
-	</a>
-</p>
+
+<dl>
+    <dt>{l s='Amount' mod='bankbri'}</dt>
+    <dd>{$total}</dd>
+    <dt>{l s='Name of account owner' mod='bankbri'}</dt>
+    <dd>{$bankbriOwner}</dd>
+    <dt>{l s='Please include these details' mod='bankbri'}</dt>
+    <dd>{$bankbriDetails}</dd>
+    <dt>{l s='Bank name' mod='bankbri'}</dt>
+    <dd>{$bankbriAddress nofilter}</dd>
+</dl>
